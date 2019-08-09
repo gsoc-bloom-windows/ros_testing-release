@@ -1,20 +1,15 @@
 <?xml version="1.0"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
-    <id>ros-dashing-ros-testing</id>
-    <version>0.1.0</version>
-    <title>ros-dashing-ros-testing</title>
-    <authors>Michel Hidalgo <michel@ekumenlabs.com></authors>
+    <id>@(Package)</id>
+    <version>@(Version)</version>
+    <title>@(Package)</title>
+    <authors>@(Authors)</authors>
     <owners>OSRF</owners>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>The entry point package to launch testing in ROS.</description>
+    <description>@(Description)</description>
     <dependencies>
-			<dependency id="ros-dashing-launch-testing"/>
-			<dependency id="ros-dashing-launch-testing-ament-cmake"/>
-			<dependency id="ros-dashing-launch-testing-ros"/>
-			<dependency id="ros-dashing-ros2test"/>
-			<dependency id="ros-dashing-ros-workspace"/>
-
+@[for d in Depends]@(d)@[end for]
     </dependencies>
   </metadata>
   <files>
